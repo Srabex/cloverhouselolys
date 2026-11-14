@@ -1,0 +1,44 @@
+.panel { background: var(--crema); }
+.panel__barra { background: var(--blanco); border-bottom: 1px solid var(--arena); }
+.panel__barra-in { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
+.panel__main { padding: 28px 0 80px; max-width: 860px; }
+.panel h1 { font-size: 30px; color: var(--verde-osc); margin-bottom: 14px; }
+.panel__cabeza { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.caja { background: var(--blanco); border-radius: 20px; padding: 28px; max-width: 420px; margin: 30px auto; box-shadow: var(--sombra); }
+.ayuda { color: var(--gris); font-size: 14px; }
+.enlace { background: none; border: 0; color: var(--verde); font: 500 15px var(--sans); cursor: pointer; padding: 10px 0; text-decoration: underline; }
+.enlace--peligro { color: #A3361F; }
+.panel .campo { display: block; margin-bottom: 14px; }
+.panel .campo span { display: block; font: 500 14px var(--sans); color: var(--verde-osc); margin-bottom: 6px; }
+.panel input:not([type="checkbox"]):not([type="file"]), .panel select, .panel textarea { width: 100%; border: 1.5px solid var(--arena); border-radius: 12px; padding: 12px 13px; font: 400 16px var(--sans); background: var(--blanco); color: var(--tinta); }
+.panel input:focus, .panel select:focus, .panel textarea:focus { outline: none; border-color: var(--verde); }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: end; }
+.cuatro { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 600px) { .dos, .cuatro { grid-template-columns: 1fr 1fr; } }
+
+.lista { display: grid; gap: 10px; margin-top: 10px; }
+.fila { display: grid; grid-template-columns: 84px 1fr auto; gap: 14px; align-items: center; background: var(--blanco); border-radius: 14px; padding: 10px; border: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; box-shadow: inset 0 0 0 1px var(--arena); }
+.fila:hover { box-shadow: inset 0 0 0 1.5px var(--salvia); }
+.fila img { width: 84px; height: 64px; object-fit: cover; border-radius: 10px; background: var(--arena); }
+.fila strong { display: block; font: 500 16px var(--serif); color: var(--verde-osc); }
+.fila small { color: var(--gris); }
+.pastilla { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: var(--salvia-clara); color: var(--verde-osc); white-space: nowrap; }
+.pastilla--apartada { background: var(--oro-claro); }
+.pastilla--vendida { background: var(--verde-osc); color: var(--oro-claro); }
+.pastilla--oculta { background: #e7e2da; color: var(--gris); }
+
+.editor { background: var(--blanco); border-radius: 20px; padding: clamp(18px, 3vw, 28px); box-shadow: inset 0 0 0 1px var(--arena); }
+.fotos-caja { border: 0; padding: 0; margin: 6px 0 16px; }
+.fotos-caja legend { font: 500 14px var(--sans); color: var(--verde-osc); margin-bottom: 8px; }
+.fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.foto { position: relative; border-radius: 10px; overflow: hidden; background: var(--arena); aspect-ratio: 4 / 3; }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+.foto:first-child { outline: 3px solid var(--oro); outline-offset: -3px; }
+.foto__botones { position: absolute; inset: auto 0 0 0; display: flex; justify-content: space-between; padding: 4px; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
+.foto__botones button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: rgba(255,253,248,.92); font-size: 16px; cursor: pointer; }
+.subir { cursor: pointer; }
+.interruptor { display: flex; align-items: center; gap: 10px; font: 500 15px var(--sans); color: var(--verde-osc); padding: 14px 0; }
+.interruptor input { width: 22px; height: 22px; accent-color: var(--verde); }
+.editor__acciones { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+.aviso { position: fixed; left: 50%; bottom: 20px; translate: -50% 0; background: var(--verde-osc); color: var(--blanco); padding: 12px 20px; border-radius: 999px; font-size: 15px; box-shadow: var(--sombra); z-index: 50; max-width: calc(100% - 30px); }
+.aviso--error { background: #A3361F; }

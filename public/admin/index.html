@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel · Clover House</title>
+<meta name="theme-color" content="#1F4D3A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/estilos.css?v=1">
+<link rel="stylesheet" href="/admin/admin.css?v=1">
+</head>
+<body class="panel">
+<header class="panel__barra">
+  <div class="envoltura panel__barra-in">
+    <a class="marca" href="/" target="_blank" rel="noopener">
+      <svg class="marca__icono" viewBox="0 0 120 120" aria-hidden="true"><use href="#trebol"/></svg>
+      <span class="marca__texto"><strong>Mi panel</strong><small>Clover House</small></span>
+    </a>
+    <button class="enlace" id="salir" type="button" hidden>Salir</button>
+  </div>
+</header>
+
+<main class="envoltura panel__main">
+  <!-- Entrar -->
+  <section class="caja" id="vista-entrar" hidden>
+    <h1>Entrar</h1>
+    <form id="form-correo">
+      <label class="campo"><span>Tu correo</span><input type="email" name="email" autocomplete="email" required></label>
+      <button class="boton boton--ancho" type="submit">Mandarme un código</button>
+    </form>
+    <form id="form-codigo" hidden>
+      <p class="ayuda">Te mandamos un código de 6 números a <b id="correo-enviado"></b>. Revisa también tu correo no deseado.</p>
+      <label class="campo"><span>Código</span><input name="codigo" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="\d{6}" required></label>
+      <button class="boton boton--ancho" type="submit">Entrar</button>
+      <button class="enlace" type="button" id="otro-correo">Usar otro correo</button>
+    </form>
+  </section>
+
+  <!-- Lista -->
+  <section id="vista-lista" hidden>
+    <div class="panel__cabeza">
+      <h1>Mis casas</h1>
+      <button class="boton boton--chico" id="nueva" type="button">+ Agregar casa</button>
+    </div>
+    <p class="ayuda">Toca una casa para editarla. Las <b>ocultas</b> no aparecen en el sitio. Las <b>vendidas</b> se quedan al final como prueba de tu trabajo.</p>
+    <div class="lista" id="lista"></div>
+  </section>
+
+  <!-- Editor -->
+  <section id="vista-editor" hidden>
+    <button class="enlace" type="button" id="volver">← Mis casas</button>
+    <h1 id="editor-titulo">Editar casa</h1>
+    <form id="form-casa" class="editor">
+      <label class="campo"><span>Título *</span><input name="titulo" required maxlength="120" placeholder="Ej. Casa de una planta en Sicomoro"></label>
+      <div class="dos">
+        <label class="campo"><span>Zona o colonia</span><input name="zona" maxlength="80"></label>
+        <label class="campo"><span>Estado</span>
+          <select name="estado"><option value="disponible">Disponible</option><option value="apartada">Apartada</option><option value="vendida">Vendida</option></select>
+        </label>
+      </div>
+      <div class="dos">
+        <label class="campo"><span>Precio (solo números)</span><input name="precio" inputmode="numeric" placeholder="3950000"></label>
+        <label class="campo"><span>Nota del precio</span><input name="precio_nota" maxlength="40" placeholder="Ej. Negociable"></label>
+      </div>
+      <div class="cuatro">
+        <label class="campo"><span>Recámaras</span><input name="recamaras" inputmode="decimal"></label>
+        <label class="campo"><span>Baños</span><input name="banos" inputmode="decimal" placeholder="2.5"></label>
+        <label class="campo"><span>m² construcción</span><input name="construccion" inputmode="decimal"></label>
+        <label class="campo"><span>m² terreno</span><input name="terreno" inputmode="decimal"></label>
+      </div>
+      <label class="campo"><span>Descripción</span><textarea name="descripcion" rows="4" maxlength="3000"></textarea></label>
+      <label class="campo"><span>Características (una por renglón)</span><textarea name="caracteristicas" rows="5"></textarea></label>
+
+      <fieldset class="fotos-caja">
+        <legend>Fotos <small>(la primera es la portada)</small></legend>
+        <div class="fotos" id="fotos"></div>
+        <label class="boton boton--claro boton--chico subir">
+          + Agregar fotos <input type="file" id="archivo" accept="image/*" multiple hidden>
+        </label>
+        <p class="ayuda" id="subiendo" hidden></p>
+      </fieldset>
+
+      <div class="dos">
+        <label class="interruptor"><input type="checkbox" name="visible" checked> <span>Mostrar en el sitio</span></label>
+        <label class="campo"><span>Orden (menor = primero)</span><input name="orden" inputmode="numeric"></label>
+      </div>
+
+      <div class="editor__acciones">
+        <button class="boton" type="submit" id="guardar">Guardar</button>
+        <button class="enlace enlace--peligro" type="button" id="borrar">Borrar casa</button>
+      </div>
+    </form>
+  </section>
+
+  <p class="aviso" id="aviso" role="status" hidden></p>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="trebol" viewBox="-60 -60 120 120">
+      <path d="M3,4 C10,18 17,31 32,42" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <g fill="currentColor"><path transform="rotate(-45)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(45)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(135)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(-135)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/></g>
+      <path d="M-5,6 V-1 A5,5 0 0 1 5,-1 V6 Z" fill="#C9A24A"/>
+    </symbol>
+  </defs>
+</svg>
+<script src="/admin/admin.js?v=1" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "cloverhouselolys",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true, "not_found_handling": "404-page" },
+  "previews": {},
+  "vars": {
+    "DOMINIO": "cloverhouse.mx",
+    "REDIRIGIR": "www.cloverhouse.mx",
+    "ADMIN_EMAILS": "lolysla@outlook.com,srab17.6@gmail.com",
+    "REMITENTE": "Clover House <acceso@asesorsebas.com>"
+  }
+  // Base de datos: al crear la D1 "cloverhouse" en Cloudflare, pegar aquí su ID:
+  // ,"d1_databases": [{ "binding": "DB", "database_name": "cloverhouse", "database_id": "PEGAR-ID" }]
+}
