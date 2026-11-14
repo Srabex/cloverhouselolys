@@ -9,7 +9,6 @@
     "REDIRIGIR": "www.cloverhouse.mx",
     "ADMIN_EMAILS": "lolysla@outlook.com,srab17.6@gmail.com",
     "REMITENTE": "Clover House <acceso@asesorsebas.com>"
-  }
-  // Base de datos: al crear la D1 "cloverhouse" en Cloudflare, pegar aquí su ID:
-  // ,"d1_databases": [{ "binding": "DB", "database_name": "cloverhouse", "database_id": "PEGAR-ID" }]
+  },
+  "d1_databases": [{ "binding": "DB", "database_name": "cloverhouse", "database_id": "ab2e666d-e1b8-4dd6-998d-636e145a9e3d" }]
 }

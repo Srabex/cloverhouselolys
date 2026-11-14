@@ -26,4 +26,4 @@ OG `public/og.jpg` (fuente `diseno/og.html`, captura 1200×630 con Chrome headle
 - `node herramientas/dev.mjs 8787` → http://localhost:8787 (D1 simulada con `node:sqlite`; el código de acceso sale en la consola).
 
 ## Cloudflare
-Worker `cloverhouselolys`: Import a repository, build vacío, deploy `npx wrangler deploy`, producción en `main`. D1 `cloverhouse` (pegar el ID en `wrangler.jsonc`). Secret `RESEND_API_KEY` (llave de Resend solo para asesorsebas.com). Dominio: modelo Six de Tacos (zona en Cloudflare, nameservers en GoDaddy, Custom domain raíz + www; no quitar el dominio en Lovable hasta que los DNS ya respondan Cloudflare).
+Worker `cloverhouselolys`: Import a repository, build vacío, deploy `npx wrangler deploy`, producción en `main`. D1 `cloverhouse` (ID ab2e666d-e1b8-4dd6-998d-636e145a9e3d, ya en `wrangler.jsonc`). Secret `RESEND_API_KEY` (llave de Resend solo para asesorsebas.com). Dominio: modelo Six de Tacos (zona en Cloudflare, nameservers en GoDaddy, Custom domain raíz + www; no quitar el dominio en Lovable hasta que los DNS ya respondan Cloudflare).
