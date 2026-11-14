@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tu sitio nuevo: la idea · Clover House</title>
+<meta name="description" content="Por qué tu sitio nuevo está pensado para conseguirte clientes, qué significa el trébol y qué necesito de ti para publicarlo.">
+<meta name="theme-color" content="#1F4D3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cloverhouse.mx/propuesta/">
+<meta property="og:title" content="Lolys, así pensamos tu sitio nuevo 🍀">
+<meta property="og:description" content="La idea, el trébol, los colores y lo que necesito de ti para publicarlo.">
+<meta property="og:image" content="https://cloverhouse.mx/propuesta/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trébol de Clover House con la paleta de colores nueva">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cloverhouse.mx/propuesta/og.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/estilos.css?v=1">
+<style>
+  .doc { padding: 40px 0 90px; }
+  .doc .envoltura { width: min(760px, 100% - 36px); }
+  .doc h1 { font-size: clamp(34px, 6vw, 52px); color: var(--verde-osc); margin: 6px 0 18px; }
+  .doc h2 { font-size: clamp(26px, 4vw, 34px); color: var(--verde-osc); margin: 56px 0 14px; }
+  .doc h3 { font-size: 21px; color: var(--verde-osc); margin: 0 0 6px; }
+  .doc p, .doc li { font-size: 17px; color: #3e4842; }
+  .entrada { font-size: 19px !important; }
+  .tarjeta-doc { background: var(--blanco); border-radius: var(--radio); padding: 22px 24px; box-shadow: inset 0 0 0 1px var(--arena); margin: 14px 0; }
+  .tarjeta-doc p:last-child { margin: 0; }
+  .letra { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--verde); color: var(--oro-claro); font: 500 17px var(--serif); margin-right: 8px; vertical-align: middle; }
+  .recorrido { counter-reset: r; list-style: none; padding: 0; }
+  .recorrido li { counter-increment: r; padding: 12px 0 12px 48px; position: relative; border-bottom: 1px solid var(--arena); }
+  .recorrido li::before { content: counter(r); position: absolute; left: 0; top: 12px; width: 32px; height: 32px; border-radius: 50%; background: var(--salvia-clara); color: var(--verde-osc); display: grid; place-items: center; font: 500 15px var(--sans); }
+  .marca-grande { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
+  .marca-grande figure { margin: 0; background: var(--blanco); border-radius: var(--radio); padding: 24px; text-align: center; box-shadow: inset 0 0 0 1px var(--arena); display: grid; gap: 12px; align-content: center; }
+  .marca-grande figure.oscura { background: var(--verde-osc); color: var(--blanco); box-shadow: none; }
+  .marca-grande svg { width: 120px; height: 120px; margin: 0 auto; color: var(--verde); }
+  .oscura svg { color: var(--oro-claro); --oro: var(--verde-osc); }
+  .marca-grande figcaption { font-size: 14px; color: var(--gris); }
+  .oscura figcaption { color: rgba(255,253,248,.7); }
+  .nombre-logo { font: 500 24px var(--serif); line-height: 1.2; }
+  .nombre-logo small { display: block; font: 400 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; opacity: .7; margin-top: 4px; }
+  .significado { list-style: none; padding: 0; display: grid; gap: 10px; }
+  .significado li { background: var(--blanco); border-radius: 14px; padding: 14px 18px; box-shadow: inset 0 0 0 1px var(--arena); }
+  .paleta { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin: 16px 0; }
+  .color { border-radius: 14px; overflow: hidden; background: var(--blanco); box-shadow: inset 0 0 0 1px var(--arena); }
+  .color i { display: block; height: 72px; }
+  .color span { display: block; padding: 10px 12px; font-size: 13px; line-height: 1.4; color: var(--gris); }
+  .color b { display: block; color: var(--tinta); font-weight: 500; font-size: 14px; }
+  .antes-ahora { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .antes-ahora figure { margin: 0; text-align: center; }
+  .antes-ahora img, .antes-ahora .ahora { border-radius: var(--radio); width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #fff; box-shadow: inset 0 0 0 1px var(--arena); }
+  .antes-ahora .ahora { display: flex; align-items: center; justify-content: center; gap: 12px; background: var(--crema); }
+  .antes-ahora .ahora svg { width: 64px; height: 64px; color: var(--verde); }
+  .antes-ahora figcaption { font-size: 14px; color: var(--gris); margin-top: 8px; }
+  .letras { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .letras div { background: var(--blanco); border-radius: 14px; padding: 18px; box-shadow: inset 0 0 0 1px var(--arena); }
+  .letras .m { font-size: 34px; color: var(--verde-osc); line-height: 1.1; display: block; margin-bottom: 6px; }
+  .pendientes { counter-reset: p; list-style: none; padding: 0; }
+  .pendientes li { counter-increment: p; background: var(--blanco); border-radius: 14px; padding: 14px 18px 14px 58px; margin-bottom: 10px; position: relative; box-shadow: inset 0 0 0 1px var(--arena); }
+  .pendientes li::before { content: counter(p); position: absolute; left: 16px; top: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--oro); color: var(--verde-osc); display: grid; place-items: center; font: 500 14px var(--sans); }
+  .pendientes small { display: block; color: var(--gris); font-size: 14px; }
+  .listo { font-size: 13px; background: var(--salvia-clara); color: var(--verde-osc); padding: 2px 9px; border-radius: 999px; margin-left: 6px; }
+  .final { text-align: center; margin-top: 50px; }
+  @media (max-width: 560px) { .marca-grande, .antes-ahora, .letras { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main class="doc">
+<div class="envoltura">
+
+  <p class="antetitulo">Clover House · Propuesta</p>
+  <h1>Lolys, así pensamos tu sitio nuevo</h1>
+  <p class="entrada">Este año el mercado en Chihuahua ha estado lento. En un mercado así, una página que solo enseña casas no basta: la gente ve fotos y no escribe. Tu sitio nuevo está pensado para lo contrario: <strong>que te escriban compradores que ya saben lo que quieren.</strong></p>
+  <p><a class="boton" href="/" target="_blank" rel="noopener">Ver el sitio de prueba</a></p>
+
+  <h2>La idea: búsqueda a la medida + confianza</h2>
+  <p>Tu diferenciador es claro: <em>"No te vendo mi inventario, busco lo que tú necesitas, sin hacerte perder el tiempo"</em>. Casi ningún asesor puede decir eso. Por eso el sitio se apoya en dos ideas juntas:</p>
+  <div class="tarjeta-doc">
+    <h3><span class="letra">A</span>Búsqueda a la medida</h3>
+    <p>El centro del sitio es <strong>"Cuéntame qué buscas"</strong>: en un minuto el cliente elige zona, presupuesto, recámaras, cómo va a pagar (Infonavit, banco, contado) y para cuándo. Te llega todo ordenado a tu WhatsApp. Así, antes de la primera llamada ya sabes si es un comprador real y qué buscarle.</p>
+  </div>
+  <div class="tarjeta-doc">
+    <h3><span class="letra">C</span>Confianza</h3>
+    <p>Tú al frente, con tu foto y tus cifras (+7 años, +50 negociaciones), tu forma de trabajar en cuatro pasos, opiniones de tus clientes y las casas que ya vendiste. Quien llega por un anuncio o una recomendación ve a una profesional, no un catálogo más.</p>
+  </div>
+  <p>Las casas siguen ahí, pero como <em>"opciones disponibles hoy"</em>. Si ninguna le queda, el sitio lo regresa a contarte qué busca, en lugar de dejarlo ir.</p>
+
+  <h2>El recorrido de tu cliente</h2>
+  <ol class="recorrido">
+    <li><strong>Te conoce:</strong> tu foto, tu frase y tus cifras.</li>
+    <li><strong>Se identifica:</strong> "¿Te ha pasado?", lo que le frustra de buscar casa.</li>
+    <li><strong>Entiende cómo trabajas:</strong> el método del trébol, en cuatro pasos.</li>
+    <li><strong>Te cuenta qué busca</strong> y te llega a tu WhatsApp.</li>
+    <li><strong>Ve opciones reales</strong> y puede escribirte por una casa en específico.</li>
+    <li><strong>Confirma que eres de fiar:</strong> opiniones, sobre ti y preguntas frecuentes.</li>
+  </ol>
+  <p><strong>Lo que ganas:</strong> clientes más filtrados, menos visitas perdidas, una página que funciona con anuncios y tu propio panel para subir casas desde el celular.</p>
+
+  <h2>Tu imagen nueva</h2>
+  <p>Conservamos lo que ya es tuyo, <strong>el trébol y tu lema</strong>, y lo hicimos más simple y más fuerte.</p>
+  <div class="marca-grande">
+    <figure>
+      <svg viewBox="0 0 120 120" aria-hidden="true"><use href="#trebol"/></svg>
+      <div class="nombre-logo">Lolys Alvarez<small>Clover House · Bienes raíces</small></div>
+    </figure>
+    <figure class="oscura">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><use href="#trebol"/></svg>
+      <figcaption>Se ve bien en fondo oscuro, chiquito en WhatsApp o grande en una lona.</figcaption>
+    </figure>
+  </div>
+  <h3>Qué significa</h3>
+  <ul class="significado">
+    <li>🍀 <strong>Las cuatro hojas</strong> son los cuatro pasos de tu método: <em>te escucho, busco por ti, filtro y negocio</em>. Cada hoja es una parte del camino.</li>
+    <li>🚪 <strong>La puerta dorada en el centro</strong> es la casa que tu cliente está buscando. Todo tu trabajo gira alrededor de eso: llegar a esa puerta.</li>
+    <li>🌱 <strong>El tallo</strong> es el camino: la perseverancia que necesita cada búsqueda.</li>
+    <li>✨ <strong>El dorado</strong> es tu "toque de suerte". Tu lema sigue siendo el mismo: <em>"Donde la perseverancia y un toque de suerte te llevan a casa"</em>.</li>
+  </ul>
+
+  <h3 style="margin-top:30px">Antes y ahora</h3>
+  <div class="antes-ahora">
+    <figure><img src="/propuesta/logo-actual.webp" alt="Logo actual de Lolys Alvarez"><figcaption>Tu logo actual</figcaption></figure>
+    <figure><div class="ahora"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#trebol"/></svg><span class="nombre-logo" style="text-align:left">Lolys Alvarez<small>Clover House</small></span></div><figcaption>Propuesta</figcaption></figure>
+  </div>
+  <p style="margin-top:14px">El logo actual junta casa y trébol con líneas delgadas. Se ve bien en grande, pero en pequeño (el círculo de WhatsApp, la pestaña del navegador, un sello) se pierde. El trébol nuevo es una sola forma sólida y se reconoce a cualquier tamaño.</p>
+
+  <h3 style="margin-top:30px">Colores</h3>
+  <div class="paleta">
+    <div class="color"><i style="background:#1F4D3A"></i><span><b>Verde trébol</b>Confianza y estabilidad. El color principal.</span></div>
+    <div class="color"><i style="background:#143326"></i><span><b>Verde noche</b>Fondos elegantes y textos.</span></div>
+    <div class="color"><i style="background:#C9A24A"></i><span><b>Oro</b>Tu toque de suerte. Botones importantes y detalles.</span></div>
+    <div class="color"><i style="background:#8FA98A"></i><span><b>Salvia</b>Suave y natural, para apoyar.</span></div>
+    <div class="color"><i style="background:#F6F1E7"></i><span><b>Crema</b>La calidez de un hogar. El fondo.</span></div>
+    <div class="color"><i style="background:#ECE3D2"></i><span><b>Arena</b>Para separar secciones.</span></div>
+  </div>
+  <p>Verde y dorado ya eran tus colores; los ajustamos para que se vean más elegantes, más cálidos y más fáciles de leer en el celular.</p>
+
+  <h3 style="margin-top:30px">Letras</h3>
+  <div class="letras">
+    <div><span class="m" style="font-family:var(--serif)">Lora</span>Para títulos: elegante pero cercana, como una carta escrita a mano.</div>
+    <div><span class="m" style="font-family:var(--sans)">Poppins</span>Para textos: clara y moderna, fácil de leer en el celular.</div>
+  </div>
+  <p style="margin-top:14px"><strong>Si prefieres conservar tu logo actual, no hay problema:</strong> el sitio se adapta a él. Lo importante es la idea de fondo, no el dibujo.</p>
+
+  <h2>Lo que necesito de ti para publicarlo</h2>
+  <ol class="pendientes">
+    <li><strong>Tu visto bueno</strong> al sitio, al logo y a los colores (o qué cambiarías).</li>
+    <li><strong>Revisar que los textos suenen a ti.</strong><small>Sobre todo: que acompañas con el crédito y las escrituras, y que buscas en todo el mercado.</small></li>
+    <li><strong>Testimonios de tus clientes:</strong> capturas de WhatsApp, audios o textos.<small>Dime si puedo poner su nombre (o solo "Familia P.") y en qué zona compraron.</small></li>
+    <li><strong>3 historias de clientes</strong> (sin nombres): qué buscaban, qué les encontraste y en cuánto tiempo.</li>
+    <li><strong>Las zonas o colonias que más trabajas.</strong><small>Para cambiar "Norte, Sur, Centro…" del formulario por las tuyas.</small></li>
+    <li><strong>Tu comprador más común:</strong> tipo de casa, presupuesto y si usa Infonavit, Fovissste, banco o contado.</li>
+    <li><strong>¿Las 6 casas siguen disponibles?</strong> Y mándame las nuevas con fotos.<small>Si alguna ya la vendiste, mejor: la ponemos como "Vendida por Lolys".</small></li>
+    <li><strong>Una o dos fotos tuyas</strong> trabajando o entregando llaves, si tienes. <span class="listo">La de estudio ya la tengo</span></li>
+    <li><strong>¿Tienes un asesor de crédito de confianza?</strong></li>
+    <li><strong>¿Quién paga tu comisión?</strong> ¿El comprador o el vendedor? Para explicarlo claro.</li>
+    <li><strong>Las ligas de tu Facebook, Instagram y Google Maps</strong>, y tu horario de atención.</li>
+    <li><strong>Entrar a tu panel</strong> para probarlo: <a href="/admin/">/admin</a> con lolysla@outlook.com.<small>Te llega un código al correo (revisa también el correo no deseado).</small></li>
+  </ol>
+
+  <div class="final">
+    <svg viewBox="0 0 120 120" style="width:56px;height:56px;color:var(--verde);margin:0 auto 10px" aria-hidden="true"><use href="#trebol"/></svg>
+    <p><em>"Donde la perseverancia y un toque de suerte te llevan a casa."</em></p>
+    <p><a class="boton" href="/" target="_blank" rel="noopener">Ver el sitio de prueba</a></p>
+  </div>
+</div>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="trebol" viewBox="-60 -60 120 120">
+      <path d="M3,4 C10,18 17,31 32,42" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <g fill="currentColor"><path transform="rotate(-45)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(45)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(135)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/><path transform="rotate(-135)" d="M0,-3 C-6,-9 -22,-16 -22,-30 C-22,-40 -12,-46 -6,-44 C-3,-43 -1,-40 0,-37 C1,-40 3,-43 6,-44 C12,-46 22,-40 22,-30 C22,-16 6,-9 0,-3Z"/></g>
+      <path d="M-5,6 V-1 A5,5 0 0 1 5,-1 V6 Z" fill="var(--oro, #C9A24A)"/>
+    </symbol>
+  </defs>
+</svg>
+</body>
+</html>

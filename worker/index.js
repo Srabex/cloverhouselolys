@@ -214,6 +214,13 @@ export default {
       const status = e instanceof Respuesta ? e.status : 500;
       return json({ error: e instanceof Respuesta ? e.message : `Error del servidor: ${e.message}` }, status);
     }
-    return env.ASSETS.fetch(req);
+    const res = await env.ASSETS.fetch(req);
+    // Fuera del dominio final (liga de prueba workers.dev), las URLs absolutas de OG apuntan al host actual
+    if (env.DOMINIO && url.hostname !== env.DOMINIO && (res.headers.get("content-type") || "").includes("text/html")) {
+      const html = (await res.text()).replaceAll(`https://${env.DOMINIO}`, url.origin);
+      const h = new Headers(res.headers); h.delete("content-length");
+      return new Response(html, { status: res.status, headers: h });
+    }
+    return res;
   },
 };

@@ -18,8 +18,11 @@ Captar **compradores** (no vendedores, decisión de Sebas). Concepto A + C: "No 
 ## Identidad (propuesta nov 2026, pendiente de aprobar por Lolys)
 Trébol de cuatro hojas con una puerta dorada al centro ("tu casa en el centro de la suerte"). Fuente: `diseno/marca.svg`. Paleta: verde trébol #1F4D3A, verde noche #143326, salvia #8FA98A, crema #F6F1E7, arena #ECE3D2, oro #C9A24A. Letras Lora (títulos) + Poppins, servidas desde `public/fuentes/`.
 
+## Página /propuesta
+Explica a Lolys el concepto A + C, el significado del trébol, colores y lo que falta de ella (`noindex`). OG propia `public/propuesta/og.jpg` (fuente `diseno/og-propuesta.html`). Se puede quitar al publicar en cloverhouse.mx.
+
 ## Estándar
-OG `public/og.jpg` (fuente `diseno/og.html`, captura 1200×630 con Chrome headless), favicon e íconos (fuentes `diseno/marca.svg` e `icono.svg`), `site.webmanifest`, datos `RealEstateAgent`, robots y sitemap.
+OG `public/og.jpg` (fuente `diseno/og.html`, captura 1200×630 con Chrome headless), favicon e íconos (fuentes `diseno/marca.svg` e `icono.svg`), `site.webmanifest`, datos `RealEstateAgent`, robots y sitemap. En la liga de prueba (workers.dev) el Worker cambia las URLs absolutas `https://cloverhouse.mx` del HTML por el host actual para que la vista previa de WhatsApp funcione.
 
 ## Probar
 - `node --test pruebas/*.test.mjs`
