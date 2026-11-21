@@ -1,6 +1,6 @@
 # Clover House · Lolys Alvarez (cloverhouse.mx)
 
-Sitio de Lolys Alvarez, asesora inmobiliaria en Chihuahua. Rehecho desde cero fuera de Lovable (nov 2026). El repo viejo `Srabex/cloverhouse` (Lovable) queda como respaldo; ahí, en la rama `rescate-lovable`, están el export de la tabla y las fotos originales.
+Sitio de Lolys Alvarez, asesora inmobiliaria en Chihuahua. Rehecho desde cero fuera de Lovable y **publicado en cloverhouse.mx el 19 nov 2026**; fuera de Lovable desde el 20 nov 2026. El repo viejo `Srabex/cloverhouse` (Lovable) queda como respaldo; ahí, en la rama `rescate-lovable`, están el export de la tabla y las fotos originales.
 
 ## Objetivo comercial
 Captar **compradores** (no vendedores, decisión de Sebas). Concepto A + C: "No te vendo mi inventario, encuentro la casa que tú necesitas". Lo principal es el formulario **Cuéntame qué buscas** (manda la búsqueda por WhatsApp); las casas son secundarias ("Opciones disponibles hoy") y la confianza se apoya en el método del trébol, las cifras (+7 años, +50 negociaciones), Sobre mí y los testimonios.
@@ -27,6 +27,11 @@ OG `public/og.jpg` (fuente `diseno/og.html`, captura 1200×630 con Chrome headle
 ## Probar
 - `node --test pruebas/*.test.mjs`
 - `node herramientas/dev.mjs 8787` → http://localhost:8787 (D1 simulada con `node:sqlite`; el código de acceso sale en la consola).
+
+## Estado (20 nov 2026)
+- En producción en cloverhouse.mx (zona en Cloudflare, nameservers darwin/gail; registro en GoDaddy, vence 15/09/2027). Custom domain raíz y www.
+- Pendiente de Lolys: visto bueno del logo y textos, testimonios (`TESTIMONIOS` en `public/app.js`), zonas del formulario, si siguen las 6 casas, redes y horario, entrar al panel. La lista completa está en `/propuesta`.
+- Ojo al cambiar nameservers: revisar que GoDaddy esté en el dominio correcto (el 19 nov 2026 se pusieron por error en gomakers.mx).
 
 ## Cloudflare
 Worker `cloverhouselolys`: Import a repository, build vacío, deploy `npx wrangler deploy`, producción en `main`. D1 `cloverhouse` (ID ab2e666d-e1b8-4dd6-998d-636e145a9e3d, ya en `wrangler.jsonc`). Secret `RESEND_API_KEY` (llave de Resend solo para asesorsebas.com). Dominio: modelo Six de Tacos (zona en Cloudflare, nameservers en GoDaddy, Custom domain raíz + www; no quitar el dominio en Lovable hasta que los DNS ya respondan Cloudflare).
